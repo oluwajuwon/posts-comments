@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 22,
     paddingVertical: 15,
-    justifyContent: 'center',
+
+    flexDirection: 'row',
   },
   leftContainer: {
     flexDirection: 'row',
@@ -15,6 +16,7 @@ export const styles = StyleSheet.create({
   rightContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginLeft: 15
   },
   centerContainer: {
     flexDirection: 'row',

@@ -19,4 +19,9 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 22,
     marginBottom: 70,
   },
+  coords: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#3b3a3a',
+  },
 });

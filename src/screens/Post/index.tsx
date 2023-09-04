@@ -19,9 +19,12 @@ export const Post = React.memo(() => {
   const { comments, error, loading } = useSelector(
     (state: RootState) => state.posts,
   );
+  const { location } = useSelector((state: RootState) => state.location);
+  const userLocation = location?.coords;
   const dispatch = useDispatch<AppDispatch>();
   const route = useRoute<PostScreenRouteProp>();
   const navigation = useNavigation();
+
   const { params } = route;
   const photo = params?.photo;
 
@@ -60,7 +63,17 @@ export const Post = React.memo(() => {
 
   return (
     <SafeAreaView>
-      <Header title={photo?.title} hasBackBtn navigation={navigation} />
+      <Header
+        extraContent={
+          <View>
+            <Text style={styles.coords}>
+              Lat: {userLocation?.latitude}, Long: {userLocation?.longitude}
+            </Text>
+          </View>
+        }
+        hasBackBtn
+        navigation={navigation}
+      />
       <View>
         <FlatList
           data={renderOrder}

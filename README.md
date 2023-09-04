@@ -79,7 +79,9 @@ There are two major tabs
 
 # Comments
 
-- The user lcoation should have an alternative way of retrieving the location incase the user does not grant the app permission to use their location. For this, a tool like google places autocomplete can be used, where a user will enter their location and the coordinates will be retrieved, for this scope of this test that alternative was not implemented. the current coordinates is just basic text for now.
+- The user location should have an alternative way of retrieving the location incase the user does not grant the app permission to use their location. For this, a tool like google places autocomplete can be used, where a user will enter their location and the coordinates will be retrieved, for this scope of this test that alternative was not implemented. The current coordinates is just basic text for now.
 - The bottom navigation used is a basic bottom navigation, for the scope of this test, although it can be customized by adding a `tabBar` component.
 - Due to time, i just did the implementation for the cards page, i did not cover tests for that screen
--
+- Redux was used to manage the global state of the app, also because both tabs use the same data
+- React native testing library was used alongside jest to test the components of the app
+- Concerning the header with the coordinates, i did not implement a general header for the Post stack in the navigation, because i wanted to make some tweaks to it so i added the header components on both screens of that stack, but i could have added it to the Navigation to make it more general in the screenOptions
